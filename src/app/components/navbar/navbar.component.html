@@ -1,0 +1,16 @@
+<nav class="navbar" [class.logged-in]="isLoggedIn">
+  <div class="logo" routerLink="/">
+    <span class="logo-accent">Game</span>borxd
+  </div>
+
+  <div class="nav-links" *ngIf="isLoggedIn">
+    <a routerLink="/games/list" routerLinkActive="active">Meus Jogos</a>
+    <a routerLink="/games/register" routerLinkActive="active">Adicionar Jogo</a>
+  </div>
+
+  <div class="user-actions">
+    <button *ngIf="!isLoggedIn" routerLink="/login">Login</button>
+    <button *ngIf="!isLoggedIn" routerLink="/register" class="register-btn">Registrar</button>
+    <button *ngIf="isLoggedIn" (click)="logout()">Sair</button>
+  </div>
+</nav>

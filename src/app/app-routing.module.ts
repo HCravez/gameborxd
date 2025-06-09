@@ -7,7 +7,7 @@ import { GameRegisterComponent } from './pages/game-register/game-register.compo
 import { GameListComponent } from './pages/game-list/game-list.component';
 import { AuthGuard } from './guards/auth.guard';
 
-export const routes: Routes = [
+const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },

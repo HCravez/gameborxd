@@ -1,0 +1,9 @@
+<div class="rating-stars">
+  <span *ngFor="let star of starsArray" 
+        (click)="onRate(star)"
+        [class.active]="star <= rating"
+        [title]="star + ' estrela(s)'">
+    ★
+  </span>
+  <span class="rating-text" *ngIf="showText">{{ ratingText }}</span>
+</div>

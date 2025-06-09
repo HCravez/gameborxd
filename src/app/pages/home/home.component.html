@@ -1,0 +1,28 @@
+<div class="home-container">
+  <h1>Gameborxd</h1>
+  <p class="subtitle">Seu gerenciador de jogos virtuais</p>
+
+  <div *ngIf="isLoggedIn" class="user-actions">
+    <button routerLink="/games/list">Meus Jogos</button>
+    <button routerLink="/games/register">Adicionar Jogo</button>
+  </div>
+
+  <div *ngIf="!isLoggedIn" class="auth-actions">
+    <button routerLink="/login">Login</button>
+    <button routerLink="/register">Registrar</button>
+  </div>
+
+  <div class="popular-games" *ngIf="popularGames.length > 0">
+    <h2>Reviews Populares</h2>
+    <p>Jogue, compartilhe, aproveite.</p>
+    
+     <div class="game-grid">
+      <app-game-card
+        *ngFor="let game of popularGames"
+        [game]="game"
+        [gamelistpage]="false"
+        [showActions]="false">
+      </app-game-card>
+     </div>
+  </div>
+</div>

@@ -1,0 +1,108 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Usuário Teste",
+      "email": "teste@example.com",
+      "password": "123456"
+    },
+    {
+      "id": "2",
+      "name": "Henrique Cravez",
+      "email": "cravez81@gmail.com",
+      "password": "henrique123cravez"
+    },
+    {
+      "id": "3",
+      "name": "Bia",
+      "email": "triztinha@gmail.com",
+      "password": "qwertyuiop"
+    }
+  ],
+  "games": [
+    {
+      "id": "",
+      "title": "Zelda Ocarina of time",
+      "platform": "64",
+      "hoursPlayed": 40,
+      "totalDuration": 40,
+      "price": null,
+      "rating": 5,
+      "status": "finalizado",
+      "userId": "2",
+      "userName": "Henrique Cravez"
+    },
+    {
+      "id": "",
+      "title": "God of war 2",
+      "platform": "PS2",
+      "hoursPlayed": 12,
+      "totalDuration": 12,
+      "price": null,
+      "rating": 4,
+      "status": "finalizado",
+      "userId": "2",
+      "userName": "Henrique Cravez"
+    },
+    {
+      "id": "",
+      "title": "Animal Crossing New Horizons",
+      "platform": "Switch",
+      "hoursPlayed": 40000,
+      "totalDuration": 1000000000000,
+      "price": null,
+      "rating": 5,
+      "status": "finalizado",
+      "userId": "3",
+      "userName": "Beatriz Reis"
+    },
+    {
+      "id": "",
+      "title": "The sims 4",
+      "platform": "PC",
+      "hoursPlayed": 50000,
+      "totalDuration": 100000,
+      "price": 0,
+      "rating": 4,
+      "status": "emandamento",
+      "userId": "3",
+      "userName": "Beatriz Reis"
+    },
+    {
+      "id": "",
+      "title": "Assassins Creed Shadows",
+      "platform": "PS5",
+      "hoursPlayed": 15,
+      "totalDuration": 50,
+      "price": 300,
+      "rating": 3,
+      "status": "emandamento",
+      "userId": "2",
+      "userName": "Henrique Cravez"
+    },
+    {
+      "id": "",
+      "title": "Super Mario Galaxy",
+      "platform": "PC",
+      "hoursPlayed": 50,
+      "totalDuration": 20,
+      "price": 0,
+      "rating": 5,
+      "status": "finalizado",
+      "userId": "2",
+      "userName": "Henrique Cravez"
+    },
+    {
+      "id": "",
+      "title": "NBA 2K25",
+      "platform": "PS5",
+      "hoursPlayed": 20,
+      "totalDuration": 0,
+      "price": 0,
+      "rating": 4,
+      "status": "emandamento",
+      "userId": "2",
+      "userName": "Henrique Cravez"
+    }
+  ]
+}

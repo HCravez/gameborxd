@@ -1,0 +1,40 @@
+<div class="game-list-container">
+  <div class="header">
+    <h2>Meus Jogos</h2>
+    <button routerLink="/games/register">Adicionar Jogo</button>
+  </div>
+  
+  <div class="filters">
+    <select [(ngModel)]="statusFilter" (change)="loadGames()">
+      <option value="all">Todos</option>
+      <option value="jogado">Já joguei</option>
+      <option value="querojogar">Quero jogar</option>
+      <option value="abandonado">Abandonei</option>
+      <option value="completo">100% fiz tudo!</option>
+      <option value="emandamento">Jogando</option>
+      <option value="finalizado">Finalizado</option>
+
+    </select>
+    
+    <input type="text" [(ngModel)]="searchTerm" (input)="loadGames()" placeholder="Buscar jogos...">
+  </div>
+  
+  <div *ngIf="loading" class="loading">
+    Carregando...
+  </div>
+  
+  <div *ngIf="!loading && filteredGames.length === 0" class="no-games">
+    Nenhum jogo encontrado.
+  </div>
+  
+  <div class="game-grid">
+      <app-game-card
+        *ngFor="let game of filteredGames"
+        [game]="game"
+        [showActions]="true"
+        [gamelistpage]="true"
+        (onEdit)="editGame($event)"
+        (onDelete)="deleteGame($event)">
+      </app-game-card>
+  </div>
+</div>

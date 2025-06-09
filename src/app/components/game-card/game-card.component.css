@@ -1,0 +1,81 @@
+.game-card {
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.2s;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-header h3 {
+  margin: 0;
+  color: var(--accent-color);
+}
+
+.platform {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.game-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.played-details {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.game-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.review-author {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.review-author strong {
+  color: var(--accent-color);
+}

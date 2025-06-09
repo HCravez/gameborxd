@@ -1,0 +1,22 @@
+.rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.rating-stars span {
+  font-size: 1.5rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.rating-stars span.active {
+  color: gold;
+}
+
+.rating-stars .rating-text {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}

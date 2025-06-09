@@ -1,0 +1,92 @@
+<div class="game-register-container">
+  <h2>{{ editing ? 'Editar Jogo' : 'Cadastrar Jogo' }}</h2>
+  
+  <form (ngSubmit)="onSubmit()" class="game-form">
+    <div class="form-group">
+      <label>Nome do Jogo:</label>
+      <input type="text" [(ngModel)]="game.title" name="title" required>
+    </div>
+    
+    <div class="form-group">
+      <label>Plataforma:</label>
+      <select [(ngModel)]="game.platform" name="platform" required>
+        <option value="PC">PC</option>
+        <option value="PS1">PlayStation 1</option>
+        <option value="PS2">PlayStation 2</option>
+        <option value="PS3">PlayStation 3</option>
+        <option value="PS4">PlayStation 4</option>
+        <option value="PS5">PlayStation 5</option>
+        <option value="psp">PSP</option>
+        <option value="vita">PlayStation Vita</option>
+        <option value="Xbox">Xbox</option>
+        <option value="Xbox 360">Xbox 360</option>
+        <option value="Xbox one">Xbox One</option>
+        <option value="Xbox Series S">Xbox Series S</option>
+        <option value="Xbox Series X">Xbox Series X</option>
+        <option value="NES">NES</option>
+        <option value="SNES">Super Nintendo</option>
+        <option value="64">Nintendo 64</option>
+        <option value="Gamecube">Nintendo Gamecube</option>
+        <option value="Wii">Nintendo Wii</option>
+        <option value="WiiU">Nintendo WiiU</option>
+        <option value="Switch">Nintendo Switch</option>
+        <option value="Switch2">Nintendo Switch 2</option>
+        <option value="GameBoy">Nintendo GameBoy</option>
+        <option value="GameBoyColor">Nintendo GameBoy Color</option>
+        <option value="GameBoy Advance">Nintendo GameBoy Advance</option>
+        <option value="DS">Nintendo DS</option>
+        <option value="3DS">Nintendo 3DS</option>
+        <option value="MegaDrive">Mega Drive/SEGA Genises</option>
+        <option value="Saturn">SEGA Saturn</option>
+        <option value="Dreamcast">SEGA Dreamcast</option>
+        
+        <option value="Mobile">Mobile</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label>Status:</label>
+      <select [(ngModel)]="game.status" name="status" required>
+      <option value="jogado">Já joguei</option>
+      <option value="querojogar">Quero jogar</option>
+      <option value="abandonado">Abandonei</option>
+      <option value="completo">100% fiz tudo!</option>
+      <option value="emandamento">Jogando</option>
+      <option value="finalizado">Finalizado</option>
+      </select>
+    </div>
+    
+    <div class="form-group" *ngIf="game.status !== 'querojogar'">
+      <label>Horas Jogadas:</label>
+      <input type="number" [(ngModel)]="game.hoursPlayed" name="hoursPlayed">
+    </div>
+    
+    <div class="form-group">
+      <label>Tempo de Duração Total (horas):</label>
+      <input type="number" [(ngModel)]="game.totalDuration" name="totalDuration">
+    </div>
+    
+    <div class="form-group">
+      <label>Preço (R$):</label>
+      <input type="number" step="0.01" [(ngModel)]="game.price" name="price">
+    </div>
+    
+    <div class="form-group">
+      <label>Avaliação:</label>
+      <div class="rating-stars">
+        <span *ngFor="let star of [1,2,3,4,5]" (click)="game.rating = star">
+          {{ star <= game.rating ? '★' : '☆' }}
+        </span>
+      </div>
+    </div>
+    
+    <div class="form-actions">
+      <button type="submit" [disabled]="loading">{{ editing ? 'Atualizar' : 'Salvar' }}</button>
+      <button type="button" (click)="onCancel()" class="cancel-button">Cancelar</button>
+    </div>
+    
+    <div *ngIf="error" class="error-message">
+      {{error}}
+    </div>
+  </form>
+</div>

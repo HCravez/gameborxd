@@ -1,0 +1,28 @@
+<div class="game-card" >
+  <div class="game-header">
+    <h3>{{ game.title }}</h3>
+    <span class="platform">{{ game.platform }}</span>
+  </div>
+
+  <div class="review-author" *ngIf="game.userName">
+    <strong>{{ game.userName }}</strong>
+  </div>
+
+  <div class="rating">
+    <app-rating-stars [rating]="game.rating"></app-rating-stars>
+  </div>
+  
+  <div *ngIf="gamelistpage" class="game-details">
+    <div class="status">
+      {{ game.status }}
+    </div >
+      <div class="hours">Horas: {{ game.hoursPlayed }}h</div>
+
+    <div class="price">R$ {{ game.price | number:'1.2-2' }}</div>
+  </div>
+
+  <div *ngIf="showActions" class="game-actions">
+    <button (click)="onEdit.emit(game.id)">Editar</button>
+    <button class="delete" (click)="onDelete.emit(game.id)">Excluir</button>
+  </div>
+</div>
