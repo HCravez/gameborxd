@@ -14,9 +14,15 @@
     },
     {
       "id": "3",
-      "name": "Bia",
+      "name": "Beatriz Reis",
       "email": "triztinha@gmail.com",
       "password": "qwertyuiop"
+    },
+    {
+      "id": "4",
+      "name": "Gustavo Cravez",
+      "email": "gucravez@gmail.com",
+      "password": "123456789"
     }
   ],
   "games": [
@@ -28,7 +34,7 @@
       "totalDuration": 40,
       "price": null,
       "rating": 5,
-      "status": "finalizado",
+      "status": "Finalizado",
       "userId": "2",
       "userName": "Henrique Cravez"
     },
@@ -40,7 +46,7 @@
       "totalDuration": 12,
       "price": null,
       "rating": 4,
-      "status": "finalizado",
+      "status": "Finalizado",
       "userId": "2",
       "userName": "Henrique Cravez"
     },
@@ -52,7 +58,7 @@
       "totalDuration": 1000000000000,
       "price": null,
       "rating": 5,
-      "status": "finalizado",
+      "status": "Finalizado",
       "userId": "3",
       "userName": "Beatriz Reis"
     },
@@ -64,7 +70,7 @@
       "totalDuration": 100000,
       "price": 0,
       "rating": 4,
-      "status": "emandamento",
+      "status": "Jogando",
       "userId": "3",
       "userName": "Beatriz Reis"
     },
@@ -76,7 +82,7 @@
       "totalDuration": 50,
       "price": 300,
       "rating": 3,
-      "status": "emandamento",
+      "status": "Jogando",
       "userId": "2",
       "userName": "Henrique Cravez"
     },
@@ -88,7 +94,7 @@
       "totalDuration": 20,
       "price": 0,
       "rating": 5,
-      "status": "finalizado",
+      "status": "Finalizado",
       "userId": "2",
       "userName": "Henrique Cravez"
     },
@@ -100,9 +106,21 @@
       "totalDuration": 0,
       "price": 0,
       "rating": 4,
-      "status": "emandamento",
+      "status": "Jogando",
       "userId": "2",
       "userName": "Henrique Cravez"
+    },
+    {
+      "id": "",
+      "title": "Mario Party 8",
+      "platform": "Wii",
+      "hoursPlayed": 50,
+      "totalDuration": 0,
+      "price": 0,
+      "rating": 5,
+      "status": "Já joguei",
+      "userId": "4",
+      "userName": "Gustavo Cravez"
     }
   ]
 }

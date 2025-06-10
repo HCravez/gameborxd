@@ -6,7 +6,7 @@ export interface Game {
   totalDuration: number;
   price: number;
   rating: number;
-  status: 'jogado' | 'querojogar' | 'abandonado' | 'completo'| 'emandamento'| 'finalizado';
+  status: 'Já joguei' | 'Quero jogar' | 'Abandonei' | '100% fiz tudo!'| 'Jogando'| 'Finalizado';
   userId: string;
   userName?: string;
 }

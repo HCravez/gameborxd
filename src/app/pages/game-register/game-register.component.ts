@@ -23,7 +23,7 @@ export class GameRegisterComponent implements OnInit {
     totalDuration: 0,
     price: 0,
     rating: 0,
-    status: 'jogado',
+    status: 'Já joguei',
     userId: ''
   };
   

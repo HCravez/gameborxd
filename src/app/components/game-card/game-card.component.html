@@ -10,15 +10,13 @@
 
   <div class="rating">
     <app-rating-stars [rating]="game.rating"></app-rating-stars>
+    <div class="status">{{ game.status }}</div >
   </div>
   
   <div *ngIf="gamelistpage" class="game-details">
-    <div class="status">
-      {{ game.status }}
-    </div >
-      <div class="hours">Horas: {{ game.hoursPlayed }}h</div>
-
-    <div class="price">R$ {{ game.price | number:'1.2-2' }}</div>
+      <div class="hours">Horas jogadas: {{ game.hoursPlayed }}h</div>
+      <div class="total-duration">Duração: {{ game.totalDuration }}h</div>
+      <div class="price" *ngIf="game.status === 'querojogar'">R$ {{ game.price | number:'1.2-2' }}</div>
   </div>
 
   <div *ngIf="showActions" class="game-actions">
