@@ -1,12 +1,6 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Usuário Teste",
-      "email": "teste@example.com",
-      "password": "123456"
-    },
-    {
       "id": "2",
       "name": "Henrique Cravez",
       "email": "cravez81@gmail.com",
@@ -23,11 +17,17 @@
       "name": "Gustavo Cravez",
       "email": "gucravez@gmail.com",
       "password": "123456789"
+    },
+    {
+      "id": "dac81ae2-a086-4d43-a1ad-185354713802",
+      "name": "usuario teste",
+      "email": "testeteste@gmail.com",
+      "password": "qwertyuiop"
     }
   ],
   "games": [
     {
-      "id": "",
+      "id": "1",
       "title": "Zelda Ocarina of time",
       "platform": "64",
       "hoursPlayed": 40,
@@ -39,7 +39,7 @@
       "userName": "Henrique Cravez"
     },
     {
-      "id": "",
+      "id": "2",
       "title": "God of war 2",
       "platform": "PS2",
       "hoursPlayed": 12,
@@ -51,7 +51,7 @@
       "userName": "Henrique Cravez"
     },
     {
-      "id": "",
+      "id": "3",
       "title": "Animal Crossing New Horizons",
       "platform": "Switch",
       "hoursPlayed": 40000,
@@ -63,7 +63,7 @@
       "userName": "Beatriz Reis"
     },
     {
-      "id": "",
+      "id": "4",
       "title": "The sims 4",
       "platform": "PC",
       "hoursPlayed": 50000,
@@ -75,7 +75,7 @@
       "userName": "Beatriz Reis"
     },
     {
-      "id": "",
+      "id": "5",
       "title": "Assassins Creed Shadows",
       "platform": "PS5",
       "hoursPlayed": 15,
@@ -87,9 +87,9 @@
       "userName": "Henrique Cravez"
     },
     {
-      "id": "",
+      "id": "6",
       "title": "Super Mario Galaxy",
-      "platform": "PC",
+      "platform": "Wii",
       "hoursPlayed": 50,
       "totalDuration": 20,
       "price": 0,
@@ -99,19 +99,7 @@
       "userName": "Henrique Cravez"
     },
     {
-      "id": "",
-      "title": "NBA 2K25",
-      "platform": "PS5",
-      "hoursPlayed": 20,
-      "totalDuration": 0,
-      "price": 0,
-      "rating": 4,
-      "status": "Jogando",
-      "userId": "2",
-      "userName": "Henrique Cravez"
-    },
-    {
-      "id": "",
+      "id": "8",
       "title": "Mario Party 8",
       "platform": "Wii",
       "hoursPlayed": 50,
@@ -121,6 +109,126 @@
       "status": "Já joguei",
       "userId": "4",
       "userName": "Gustavo Cravez"
+    },
+    {
+      "id": "9",
+      "title": "Black Myth: Wukong",
+      "platform": "PS5",
+      "hoursPlayed": 0,
+      "totalDuration": 30,
+      "price": 349.99,
+      "rating": 0,
+      "status": "Quero jogar",
+      "userId": "2",
+      "userName": "Henrique Cravez"
+    },
+    {
+      "id": "10",
+      "title": "My little ponei",
+      "platform": "PS5",
+      "hoursPlayed": 56,
+      "totalDuration": 56,
+      "price": 0,
+      "rating": 5,
+      "status": "100% fiz tudo!",
+      "userId": "dac81ae2-a086-4d43-a1ad-185354713802",
+      "userName": "usuario teste"
+    },
+    {
+      "id": "11",
+      "title": "Alan Wake 2 ",
+      "platform": "PS5",
+      "hoursPlayed": 0,
+      "totalDuration": 20,
+      "price": 419.99,
+      "rating": 0,
+      "status": "Quero jogar",
+      "userId": "2",
+      "userName": "Henrique Cravez"
+    },
+    {
+      "id": "e598f78b-a5b1-4d75-b564-e33c05ad0d36",
+      "title": "Disco Elysium",
+      "platform": "PS4",
+      "hoursPlayed": 0,
+      "totalDuration": 50,
+      "price": 149.99,
+      "rating": 0,
+      "status": "Quero jogar",
+      "userId": "2",
+      "userName": "Henrique Cravez"
+    },
+    {
+      "id": "356594ac-3684-43df-8a9e-d42a533404e5",
+      "title": "Silent Hill 2 Ramake",
+      "platform": "PS5",
+      "hoursPlayed": 0,
+      "totalDuration": 22,
+      "price": 359.99,
+      "rating": 0,
+      "status": "Quero jogar",
+      "userId": "2",
+      "userName": "Henrique Cravez"
+    },
+    {
+      "id": "628f4240-387b-4dc7-af75-50a97bcd3f56",
+      "title": "Death Stranding Director's Cut",
+      "platform": "PS5",
+      "hoursPlayed": 0,
+      "totalDuration": 40,
+      "price": 199.99,
+      "rating": 0,
+      "status": "Quero jogar",
+      "userId": "2",
+      "userName": "Henrique Cravez"
+    },
+    {
+      "id": "59f6d2fb-1541-4cd0-bfdd-f54c338bfbbd",
+      "title": "Fallout 4",
+      "platform": "PS4",
+      "hoursPlayed": 0,
+      "totalDuration": 50,
+      "price": 49.99,
+      "rating": 0,
+      "status": "Quero jogar",
+      "userId": "2",
+      "userName": "Henrique Cravez"
+    },
+    {
+      "id": "8bdb3f88-d713-477d-829b-f5c0b127546e",
+      "title": "Marvel SpiderMan",
+      "platform": "PS4",
+      "hoursPlayed": 30,
+      "totalDuration": 20,
+      "price": 0,
+      "rating": 4,
+      "status": "100% fiz tudo!",
+      "userId": "2",
+      "userName": "Henrique Cravez"
+    },
+    {
+      "id": "3e15b43c-5142-483c-b922-b9f3eb90f4a0",
+      "title": "World of Warcraft",
+      "platform": "PC",
+      "hoursPlayed": 100,
+      "totalDuration": 100000,
+      "price": 0,
+      "rating": 5,
+      "status": "Já joguei",
+      "userId": "2",
+      "userName": "Henrique Cravez"
+    },
+    {
+      "id": "f49104ee-037e-4349-a7be-302f4998d441",
+      "title": "Chrono Trigger",
+      "platform": "SNES",
+      "hoursPlayed": 4,
+      "totalDuration": 30,
+      "price": 0,
+      "rating": 4,
+      "status": "Abandonei",
+      "userId": "2",
+      "userName": "Henrique Cravez"
     }
   ]
 }

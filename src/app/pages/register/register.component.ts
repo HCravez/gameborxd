@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { User } from '../../models/user.model';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-register',
@@ -14,8 +15,7 @@ import { User } from '../../models/user.model';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  user: User = {
-    id: '',
+  user: Partial<User> = {
     name: '',
     email: '',
     password: ''
@@ -37,8 +37,16 @@ export class RegisterComponent {
 
     this.loading = true;
     this.error = '';
+
     
-    this.authService.register(this.user).subscribe(success => {
+    const userToSave: User = {
+      id: uuidv4(),
+      name: this.user.name!,
+      email: this.user.email!,
+      password: this.user.password!
+    };
+    
+    this.authService.register(userToSave).subscribe(success => {
       this.loading = false;
       if (success) {
         this.router.navigate(['/']);

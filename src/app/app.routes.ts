@@ -15,6 +15,10 @@ export const routes: Routes = [
     path: 'games/register', 
     component: GameRegisterComponent, 
     canActivate: [AuthGuard] 
+  },  
+  {
+    path: 'games/register/:id',
+    loadComponent: () => import('./pages/game-register/game-register.component').then(m => m.GameRegisterComponent)
   },
   { 
     path: 'games/list', 

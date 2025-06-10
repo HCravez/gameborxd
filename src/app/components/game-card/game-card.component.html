@@ -8,19 +8,20 @@
     <strong>{{ game.userName }}</strong>
   </div>
 
-  <div class="rating">
-    <app-rating-stars [rating]="game.rating"></app-rating-stars>
+  <div class="rating" >
+    <app-rating-stars [rating]="game.rating" *ngIf="game.status !== 'Quero jogar'"></app-rating-stars>
     <div class="status">{{ game.status }}</div >
   </div>
   
   <div *ngIf="gamelistpage" class="game-details">
-      <div class="hours">Horas jogadas: {{ game.hoursPlayed }}h</div>
-      <div class="total-duration">Duração: {{ game.totalDuration }}h</div>
-      <div class="price" *ngIf="game.status === 'querojogar'">R$ {{ game.price | number:'1.2-2' }}</div>
+      <div class="hours" *ngIf="game.status !== 'Quero jogar'">Horas jogadas: {{ game.hoursPlayed }}h</div>
+      <div class="total-duration" *ngIf="game.status !== 'Já joguei'">Duração: {{ game.totalDuration }}h</div>
+      <div class="%completed" *ngIf="game.status === 'Jogando' || game.status ===  'Abandonei'">Concluído: {{ (game.hoursPlayed / game.totalDuration) * 100 | number:'1.0-0' }}%</div>
+      <div class="price" *ngIf="game.status === 'Quero jogar'">R$ {{ game.price | number:'1.2-2' }}</div>
   </div>
 
   <div *ngIf="showActions" class="game-actions">
-    <button (click)="onEdit.emit(game.id)">Editar</button>
+    <button class="Editar" (click)="onEdit.emit(game.id)">Editar</button>
     <button class="delete" (click)="onDelete.emit(game.id)">Excluir</button>
   </div>
 </div>

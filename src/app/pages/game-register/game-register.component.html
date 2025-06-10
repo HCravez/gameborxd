@@ -71,11 +71,11 @@
       <input type="number" step="0.01" [(ngModel)]="game.price" name="price">
     </div>
     
-    <div class="form-group">
+    <div class="form-group" *ngIf="game.status !== 'Quero jogar'">
       <label>Avaliação:</label>
       <div class="rating-stars">
         <span *ngFor="let star of [1,2,3,4,5]" (click)="game.rating = star">
-          {{ star <= game.rating ? '★' : '☆' }}
+          {{ star <= (game.rating ?? 0) ? '★' : '☆' }}
         </span>
       </div>
     </div>

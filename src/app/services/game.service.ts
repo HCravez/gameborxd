@@ -78,20 +78,31 @@ export class GameService {
     ))
   }
 
-  getPopularGames(limit: number = 8): Observable<Game[]> {
-    return this.http.get<Game[]>(
-      `${this.apiUrl}/games?limit=${limit}&_sort=rating,title&_order=desc,asc`
-    ).pipe(
-      map(games => games.map(game => ({
-        ...game,
-        userName: game.userName
-      }))),
-      catchError(error => {
-        console.error('Erro ao buscar jogos populares:', error);
-        return of([]);
-      })
-    );
-  }
+  
+getPopularGames(limit: number = 8): Observable<Game[]> {
+  return this.http.get<Game[]>(`${this.apiUrl}/games`).pipe(
+    map(games =>
+      games
+        .sort((a, b) => {
+          if (b.rating !== a.rating) {
+            return b.rating - a.rating; // rating decrescente
+          }
+          return a.title.localeCompare(b.title); // título crescente
+        })
+        .slice(0, limit)
+        .map(game => ({
+          ...game,
+          userName: game.userName
+        }))
+    ),
+    catchError(error => {
+      console.error('Erro ao buscar jogos populares:', error);
+      return of([]);
+    })
+  );
+}
+
+
 
 
   updateGame(game: Game): Observable<Game> {

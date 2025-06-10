@@ -46,8 +46,7 @@ export class GameListComponent implements OnInit {
 
   filterGames(): void {
     this.filteredGames = this.games.filter(game => {
-      const matchesStatus = this.statusFilter === 'all' || 
-                          game.status === this.statusFilter;
+      const matchesStatus = this.statusFilter === 'all' ||  game.status.toLowerCase() === this.statusFilter.toLowerCase();
       const matchesSearch = game.title.toLowerCase().includes(this.searchTerm.toLowerCase());
       return matchesStatus && matchesSearch;
     });
