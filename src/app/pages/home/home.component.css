@@ -40,6 +40,13 @@ button {
   margin-top: 2rem;
 }
 
+.banner-img {
+  width: 100vw;     
+  height: auto;
+  margin-left: calc(-50vw + 50%); 
+  display: block;
+}
+
 .game-card {
   background-color: var(--secondary-color);
   padding: 1.5rem;
@@ -56,4 +63,9 @@ button {
 .platform {
   color: var(--accent-color);
   font-style: italic;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
